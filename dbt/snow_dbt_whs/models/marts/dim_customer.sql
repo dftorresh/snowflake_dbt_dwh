@@ -1,7 +1,7 @@
 {{ config(
-    materialized='table',
+    materialized='incremental',
     incremental_strategy='merge',
-    unique_key='id'
+    unique_key='CUSTOMER_SK'
 ) }}
 
 SELECT

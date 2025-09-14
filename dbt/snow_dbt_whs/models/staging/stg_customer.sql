@@ -1,5 +1,8 @@
+{{ config(
+    materialized='view'
+) }}
+
 SELECT
-    TOP 10
     C_CUSTOMER_SK AS CUSTOMER_ID
     ,TRIM(
         REPLACE(
@@ -11,4 +14,6 @@ SELECT
     ,C_BIRTH_COUNTRY AS COUNTRY
     ,C_EMAIL_ADDRESS AS EMAIL
     ,C_PREFERRED_CUST_FLAG AS PREFERRED_CUSTOMER
-FROM {{ source('raw', 'CUSTOMER') }}
+FROM {{ source('raw', 'CUSTOMERS_STREAM') }}
+WHERE
+    METADATA$ACTION = 'INSERT'

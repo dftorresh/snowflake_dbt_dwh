@@ -2,8 +2,9 @@ version: 2
 
 sources:
   - name: raw
-    database: SNOWFLAKE_SAMPLE_DATA
-    schema: TPCDS_SF10TCL
+    database: DBT_SAMPLE_RAW_DATA
+    schema: RAW
     tables:
       - name: STORE_SALES
-      - name: CUSTOMER
+      - name: CUSTOMERS
+      - name: CUSTOMERS_STREAM
