@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Customer dimension - Business facing"
+    columns:
+      - name: CUSTOMER_SK
+        description: "Customer identifier"
+      - name: NAME
+        description: "Customer name"
+      - name: ORIGIN_COUNTRY
+        description: "Customer's country of origin"
+      - name: EMAIL
+        description: "Customer's email"
+      - name: PREFERRED_CUSTOMER
+        description: "Y if the customer is loyal"

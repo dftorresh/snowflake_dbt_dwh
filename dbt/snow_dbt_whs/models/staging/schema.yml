@@ -1,0 +1,27 @@
+
+version: 2
+
+models:
+  - name: stg_customer
+    description: "Staging model for the customer dimension"
+    columns:
+      - name: CUSTOMER_ID
+        description: "The customer identifier. Primary key."
+        data_tests:
+          - unique
+          - not_null
+      - name: FULL_NAME
+        description: "Customer name"
+        data_tests:
+          - not_null
+          - unique
+      - name: COUNTRY
+        description: "Customer origin country"
+      - name: EMAIL
+        description: "Customer email"
+        data_tests:
+          - unique
+      - name: PREFERRED_CUSTOMER
+        description: "Y if the customer is loyal"
+        data_tests:
+          - not_null
