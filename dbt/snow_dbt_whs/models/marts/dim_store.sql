@@ -1,7 +1,7 @@
 {{config(
     materialized='incremental',
     incremental_strategy='merge',
-    unique_key='STORE_ID'
+    unique_key='STORE_SK'
 )}}
 
 SELECT

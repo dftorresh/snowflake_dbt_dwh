@@ -1,3 +1,4 @@
+-- Configured to read from the Stream after initial run
 SELECT
     S_STORE_SK AS STORE_ID
     ,S_STORE_NAME AS NAME
@@ -8,4 +9,16 @@ SELECT
     ,S_COUNTY AS COUNTY
     ,S_STATE AS STATE
     ,S_STREET_NAME AS STREET
-FROM {{ source('raw', 'STORE') }}
+FROM {{ source('raw', 'STORE_STREAM') }}
+
+-- SELECT
+--     S_STORE_SK AS STORE_ID
+--     ,S_STORE_NAME AS NAME
+--     ,S_MANAGER AS MANAGER
+--     ,S_NUMBER_EMPLOYEES AS NUMBER_EMPLOYEES
+--     ,S_HOURS AS HOURS
+--     ,S_CITY AS CITY
+--     ,S_COUNTY AS COUNTY
+--     ,S_STATE AS STATE
+--     ,S_STREET_NAME AS STREET
+-- FROM {{ source('raw', 'STORE') }}

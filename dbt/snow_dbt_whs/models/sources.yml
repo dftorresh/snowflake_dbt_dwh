@@ -9,3 +9,4 @@ sources:
       - name: CUSTOMERS
       - name: CUSTOMERS_STREAM
       - name: STORE
+      - name: STORE_STREAM
