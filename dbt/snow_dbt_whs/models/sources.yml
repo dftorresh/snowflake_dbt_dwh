@@ -8,3 +8,4 @@ sources:
       - name: STORE_SALES
       - name: CUSTOMERS
       - name: CUSTOMERS_STREAM
+      - name: STORE

@@ -25,3 +25,29 @@ models:
         description: "Y if the customer is loyal"
         data_tests:
           - not_null
+  - name: stg_store
+    description: "Staging model for the store dimension"
+    columns:
+      - name: STORE_ID
+        description: "Store Unique Identifier"
+        data_tests:
+          - not_null
+          - unique
+      - name: NAME
+        description: "Store name"
+      - name: MANAGER
+        description: "Store manager"
+      - name: NUMBER_EMPLOYEES
+        description: "Number of people working in the store"
+        data_tests:
+          - is_not_negative
+      - name: HOURS
+        description: "When the store is open"
+      - name: CITY
+        description: "Which city the store is at"
+      - name: COUNTY
+        description: "Which county the store is at"
+      - name: STATE
+        description: "Which state the store is at"
+      - name: STREET
+        description: "Which street the store is at"
