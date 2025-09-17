@@ -5,4 +5,4 @@ snapshots:
       schema: snapshots
       unique_key: P_PROMO_SK
       strategy: check
-      check_cols: ["P_START_DATE","P_END_DATE", "P_COST", "P_PROMO_NAME", "P_DISCOUNT_ACTIVE"]
+      check_cols: ["P_ITEM_SK", "P_COST", "P_PROMO_NAME", "P_DISCOUNT_ACTIVE"]
