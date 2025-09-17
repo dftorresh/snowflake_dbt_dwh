@@ -1,0 +1,8 @@
+snapshots:
+  - name: promos_snapshot
+    relation: source('raw', 'PROMOTION')
+    config:
+      schema: snapshots
+      unique_key: P_PROMO_SK
+      strategy: check
+      check_cols: ["P_START_DATE","P_END_DATE", "P_COST", "P_PROMO_NAME", "P_DISCOUNT_ACTIVE"]

@@ -10,3 +10,4 @@ sources:
       - name: CUSTOMERS_STREAM
       - name: STORE
       - name: STORE_STREAM
+      - name: PROMOTION
