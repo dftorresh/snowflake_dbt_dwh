@@ -11,3 +11,4 @@ sources:
       - name: STORE
       - name: STORE_STREAM
       - name: PROMOTION
+      - name: ITEM
