@@ -6,7 +6,8 @@
 }}
 
 SELECT
-    PROMO_ID AS PROMO_SK
+    {{ dbt_utils.generate_surrogate_key(['PROMO_ID','UPDATED_AT']) }} PROMO_SK
+    ,PROMO_ID
     ,ITEM
     ,COST
     ,NAME
