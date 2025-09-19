@@ -36,3 +36,47 @@ models:
         description: "Which state the store is at"
       - name: STREET
         description: "Which street the store is at"
+  - name: dim_promotion
+    description: "Dimension model for the table promotion"
+    columns:
+      - name: PROMO_SK
+        description: "Promotion unique Identifier"
+      - name: ITEM
+        description: "Item in promotion"
+      - name: COST
+        description: "The cost of the product with the current promotion"
+      - name: NAME
+        description: "Promotion name"
+      - name: DISCOUNT_ACTIVE
+        description: "Indicates if the promotion is currently available"
+      - name: UPDATED_AT
+        description: "When the promotion was modified in the source system."
+      - name: VALID_FROM
+        description: "From when the current values for the promotion were valid"
+      - name: VALID_TO
+        description: "Until when the current values for the promotion were valid"
+  - name: dim_item
+    description: "Available items for sale"
+    columns:
+      - name: ITEM_SK
+        description: "Item unique identifier"
+      - name: ITEM_ID
+        description: "Item identifier in the source system. May be duplicated in this model."
+      - name: NAME
+        description: "Item name"
+      - name: CURRENT_PRICE
+        description: "Current price for the item"
+      - name: WHOLESALE_COST
+        description: "Wholesale cost for the item"
+      - name: SIZE
+        description: "Item size"
+      - name: COLOR
+        description: "Item color"
+      - name: UNITS
+        description: "Measure units for the item"
+      - name: UPDATED_AT
+        description: "When the item was modified in the source system."
+      - name: VALID_FROM
+        description: "From when the current values for the item were valid"
+      - name: VALID_TO
+        description: "Until when the current values for the item were valid" 
